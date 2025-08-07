@@ -1,0 +1,29 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- UAP Logo Circle -->
+  <circle cx="300" cy="315" r="80" fill="white" opacity="0.9"/>
+  <text x="300" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#1e3a8a">UAP</text>
+  
+  <!-- Main Title -->
+  <text x="500" y="280" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Department of EEE</text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="330" font-family="Arial, sans-serif" font-size="32" fill="white" opacity="0.9">University of Asia Pacific</text>
+  
+  <!-- Description -->
+  <text x="500" y="380" font-family="Arial, sans-serif" font-size="24" fill="white" opacity="0.8">Excellence in Electrical &amp; Electronic Engineering</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="1000" cy="150" r="40" fill="white" opacity="0.1"/>
+  <circle cx="1100" cy="500" r="60" fill="white" opacity="0.1"/>
+  <circle cx="150" cy="500" r="30" fill="white" opacity="0.1"/>
+</svg>

@@ -1,0 +1,47 @@
+[build]
+  publish = ".next"
+  command = "npm run build"
+  
+[build.processing]
+  skip_processing = false
+  
+[build.processing.css]
+  bundle = true
+  minify = true
+  
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.environment]
+  NODE_VERSION = "18"
+  NPM_VERSION = "9"
+
+[[redirects]]
+  from = "/our-alumni-and-student-in-entrepreneurship/*"
+  to = "/campus-life/our-alumni-and-student-in-entrepreneurship/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/campus-life/entrepreneurship/:id"
+  to = "/campus-life/our-alumni-and-student-in-entrepreneurship/:id"
+  status = 301
+
+# Handle Next.js routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
