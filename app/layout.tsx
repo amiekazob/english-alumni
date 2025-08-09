@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://uappaic.netlify.app',
     siteName: 'UAP EEE Department',
-    title: 'Department of Electrical and Electronic Engineering - University of Asia Pacific',
+    title: 'EEE Alumni Portal - University of Asia Pacific',
     description: 'Leading department in electrical and electronic engineering education at University of Asia Pacific.',
     images: [
       {

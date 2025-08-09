@@ -15,6 +15,9 @@ export interface AlumniMember {
   LinkedIn?: string;
   Facebook?: string;
   Instagram?: string;
+  verified?: number;
+  blue_verified?: number;
+  Country?: string;
 }
 
 // Fallback alumni data
@@ -29,7 +32,8 @@ const fallbackAlumniData: AlumniMember[] = [
     Point: 95,
     LinkedIn: "https://linkedin.com/in/sudeshna-khan",
     Facebook: "https://facebook.com/sudeshna.khan",
-    Instagram: "https://instagram.com/sudeshna_khan"
+    Instagram: "https://instagram.com/sudeshna_khan",
+    blue_verified: 1
   },
   {
     Name: "Engr. Md. Ashafull Alam",
@@ -40,7 +44,8 @@ const fallbackAlumniData: AlumniMember[] = [
     Photo: "ashafull.jpg",
     Point: 88,
     LinkedIn: "https://linkedin.com/in/ashafull-alam",
-    Facebook: "https://facebook.com/ashafull.alam"
+    Facebook: "https://facebook.com/ashafull.alam",
+    verified: 1
   },
   {
     Name: "Mr. Mohammad Moniruzzaman",
@@ -123,16 +128,19 @@ export async function GET(request: NextRequest) {
       
       // Map and validate data with Point field
       const alumniData: AlumniMember[] = rawData.map((row: any) => ({
-        Name: row.Name || '',
-        Batch: row.Batch || '',
-        Position: row.Position || '',
-        Institute: row.Institute || '',
-        Email: row.Email || '',
-        Photo: row.Photo || '',
+        Name: (row.Name || '').toString().trim(),
+        Batch: (row.Batch || '').toString().trim(),
+        Position: (row.Position || '').toString().trim(),
+        Institute: (row.Institute || '').toString().trim(),
+        Email: (row.Email || '').toString().trim(),
+        Photo: (row.Photo || '').toString().trim(),
         Point: row.Point ? Number(row.Point) : 0,
-        LinkedIn: row.LinkedIn || '',
-        Facebook: row.Facebook || '',
-        Instagram: row.Instagram || ''
+        LinkedIn: (row.LinkedIn || '').toString().trim(),
+        Facebook: (row.Facebook || '').toString().trim(),
+        Instagram: (row.Instagram || '').toString().trim(),
+        verified: row.verified ? Number(row.verified) : 0,
+        blue_verified: row.blue_verified ? Number(row.blue_verified) : 0,
+        Country: (row.Country || '').toString().trim()
       }));
 
       // Sort by points in descending order (highest points first)

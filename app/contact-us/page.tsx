@@ -60,12 +60,12 @@ const universityContact: UniversityContact = {
 // EEE Club Contact Information
 const clubContact = {
   officeName: "Deptartment Administration Office",
-  roomNumber: "Room 400, 4th Floor",
-  department: "Department of Pharmacy",
+  roomNumber: "Room 500, 5th Floor",
+  department: "Department of EEE",
   university: "University of Asia Pacific",
-  fullAddress: "Room 400, Pharmacy Department, University of Asia Pacific, 74/A Green Road, Dhaka-1205",
-  email: "paiclubeee@uap-bd.edu",
-  phone: "+8801XXXXXXXXX", // President/Secretary contact
+  fullAddress: "Room 500, EEE Department, University of Asia Pacific, 74/A Green Road, Dhaka-1205",
+  email: "dao.eee@uap-bd.edu",
+  phone: "+01717558922", // President/Secretary contact
   socialMedia: {
     facebook: "https://www.facebook.com/PAICLUBEEE",
     linkedin: "https://www.linkedin.com/company/108122060",
@@ -154,7 +154,7 @@ export default function ContactUsPage() {
               Contact <span className="text-blue-600">Us</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Connect with the pharmacy alumni portal
+              Connect with the EEE alumni portal
             </p>
           </AnimatedSection>
         </div>

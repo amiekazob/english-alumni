@@ -95,7 +95,7 @@ export default function RegistrationPage() {
               Alumni Registration
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join our alumni network and stay connected with the Department of Pharmacy community at the University of Asia Pacific.
+              Join our alumni network and stay connected with the Department of EEE community at the University of Asia Pacific.
             </p>
           </div>
 
@@ -164,7 +164,7 @@ export default function RegistrationPage() {
                   <div className="space-y-2">
                     <label className="flex items-center text-sm font-medium text-gray-700 mb-2">
                       <Building className="w-4 h-4 mr-2 text-orange-500" />
-                      Institute/Company *
+                      Institute/Company/Workplace *
                     </label>
                     <Input
                       type="text"
@@ -330,7 +330,7 @@ export default function RegistrationPage() {
             <p className="text-gray-600">
               Need help? Contact us at{' '}
               <a href="mailto:alumni@uap-bd.edu" className="text-blue-600 hover:text-blue-800 font-medium">
-                alumni@uap-bd.edu
+                alumni-eee@uap-bd.edu
               </a>
             </p>
           </div>

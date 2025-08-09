@@ -30,7 +30,7 @@ export default function MessageFromHeadPage() {
               Message from the Head
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Department Pharmacy
+              Department EEE
             </p>
             <p className="text-lg text-blue-200">
               University of Asia Pacific
@@ -48,26 +48,24 @@ export default function MessageFromHeadPage() {
               <div className="lg:col-span-1">
                 <Card className="overflow-hidden">
                   <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center">
-                     <video 
-                       className="w-full h-full object-cover rounded-t-lg"
-                       controls
-                       poster="/images/committee/head-of-department.jpg"
-                     >
-                       <source src="/videos/head-message.mp4" type="video/mp4" />
-                       <div className="w-32 h-32 bg-blue-600 rounded-full flex items-center justify-center text-white">
-                         <GraduationCap className="w-16 h-16" />
-                       </div>
-                     </video>
+                     <iframe 
+                       className="w-full h-full rounded-t-lg"
+                       src="https://www.youtube.com/embed/x3W_aZg8tsA?si=ZxFRZjalX-h3TDcT"
+                       title="Message from Head of Department"
+                       frameBorder="0"
+                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                       allowFullScreen
+                     ></iframe>
                    </div>
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl font-bold text-gray-900">
-                       Prof. Dr. Mohammad Shahriar
+                       A.H.M. Zadidul Karim
                      </CardTitle>
                      <CardDescription className="text-lg">
                        Head of Department
                      </CardDescription>
                      <Badge className="mx-auto bg-blue-100 text-blue-800 border-blue-200">
-                       Department of Pharmacy
+                       Department of EEE
                      </Badge>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -78,11 +76,11 @@ export default function MessageFromHeadPage() {
                       </div>
                       <div className="flex items-center space-x-3 text-sm text-gray-600">
                          <Mail className="w-4 h-4" />
-                         <span>mohammad.shahriar@uap-bd.edu</span>
+                         <span>headeee@uap-bd.edu</span>
                        </div>
                       <div className="flex items-center space-x-3 text-sm text-gray-600">
                         <Phone className="w-4 h-4" />
-                        <span>+880-2-8157091-4</span>
+                       
                       </div>
                     </div>
                   </CardContent>
@@ -94,7 +92,7 @@ export default function MessageFromHeadPage() {
                 <Card className="p-8">
                   <CardHeader>
                     <CardTitle className="text-3xl font-bold text-gray-900 mb-4">
-                       Welcome to the Department of Pharmacy
+                       Welcome to the Department of EEE
                      </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6 text-gray-700 leading-relaxed">
@@ -102,61 +100,62 @@ export default function MessageFromHeadPage() {
                       Dear Students, Alumni, and Esteemed Colleagues,
                     </p>
                     
-                    <p>
-                      It is my great pleasure to welcome you to the Department of Pharmacy 
-                       at the University of Asia Pacific. As the Head of this distinguished department, I am proud to 
-                       lead an institution that has been at the forefront of pharmaceutical education and research excellence 
-                       since our establishment.
-                    </p>
+                   <p>
+  It is my great pleasure to welcome you to the Department of Electrical and Electronic Engineering (EEE) 
+  at the University of Asia Pacific. As the Head of this distinguished department, I am proud to 
+  lead an institution that has been at the forefront of engineering education, research, and innovation 
+  since its establishment.
+</p>
 
-                    <p>
-                      Our department stands as a beacon of innovation and academic excellence, committed to nurturing 
-                       the next generation of pharmacists and pharmaceutical scientists who will shape the healthcare 
-                       landscape of Bangladesh and beyond. We have built a strong foundation based on three core pillars: 
-                       academic excellence, research innovation, and healthcare industry collaboration.
-                    </p>
+<p>
+  Our department stands as a hub of technological advancement and academic excellence, committed to nurturing 
+  the next generation of engineers, innovators, and researchers who will shape the future of Bangladesh and 
+  the global technological landscape. We have built a strong foundation based on three core pillars: 
+  academic excellence, cutting-edge research, and strong industry collaboration.
+</p>
 
-                    <p>
-                      Over the years, we have witnessed remarkable growth in our academic programs, research initiatives, 
-                       and alumni network. Our graduates have gone on to achieve significant success in leading pharmaceutical 
-                       companies, healthcare institutions, and entrepreneurial ventures across the globe. From multinational 
-                       pharmaceutical corporations to local healthcare startups, our alumni are making meaningful contributions to the field of 
-                       pharmacy and pharmaceutical sciences.
-                    </p>
+<p>
+  Over the years, we have witnessed remarkable growth in our academic programs, research initiatives, 
+  and alumni network. Our graduates have gone on to achieve outstanding success in leading technology 
+  companies, power and energy sectors, telecommunications, research institutions, and entrepreneurial 
+  ventures across the globe. From multinational corporations to pioneering local startups, our alumni are 
+  making meaningful contributions to the fields of electrical engineering, electronics, telecommunications, 
+  renewable energy, artificial intelligence, and beyond.
+</p>
 
-                    <p>
-                      Our faculty members are dedicated researchers and educators who bring cutting-edge knowledge and 
-                       industry experience into the classroom. We focus on emerging areas such as pharmaceutical chemistry, 
-                       pharmacology, clinical pharmacy, drug discovery, pharmaceutical biotechnology, and pharmaceutical 
-                       technology. Our research efforts are directed towards solving real-world healthcare problems and 
-                       contributing to sustainable pharmaceutical development.
-                    </p>
+<p>
+  Our faculty members are dedicated educators and researchers who bring both academic expertise and 
+  real-world experience into the classroom. We focus on emerging areas such as power systems, renewable energy, 
+  robotics and automation, signal processing, telecommunications, embedded systems, VLSI design, and 
+  artificial intelligence. Our research efforts address critical challenges in energy efficiency, sustainable 
+  technology, smart systems, and advanced communication.
+</p>
 
-                    <p>
-                      The department takes pride in maintaining strong industry partnerships that provide our students 
-                       with valuable internship opportunities, mentorship programs, and career guidance. We believe in 
-                       bridging the gap between academic learning and practical application, ensuring our graduates are 
-                       well-prepared for the challenges of the modern pharmaceutical and healthcare workplace.
-                    </p>
+<p>
+  The department takes pride in maintaining strong industry partnerships that provide our students with 
+  valuable internship opportunities, hands-on training, mentorship, and career guidance. We believe in 
+  bridging the gap between theoretical knowledge and practical application, ensuring our graduates are 
+  fully equipped to meet the demands of the rapidly evolving engineering world.
+</p>
 
-                    <p>
-                      As we look towards the future, we remain committed to excellence in higher education, empowering 
-                       minds, shaping futures, and building tomorrow's leaders through innovative education and research. 
-                       Our vision is to become the leading pharmacy department in Bangladesh, 
-                       recognized globally for our academic excellence and research contributions.
-                    </p>
+<p>
+  As we look towards the future, we remain committed to excellence in higher education, empowering 
+  minds, shaping futures, and building tomorrow’s leaders in engineering and technology. Our vision is 
+  to become the leading EEE department in Bangladesh, recognized globally for our academic achievements, 
+  impactful research, and contribution to technological progress.
+</p>
 
-                    <p>
-                      I invite you to explore our programs, connect with our vibrant alumni community, and be part of 
-                       our journey towards pharmaceutical advancement and educational excellence. Together, we will continue 
-                       to push the boundaries of knowledge and innovation in pharmaceutical sciences.
-                    </p>
+<p>
+  I warmly invite you to explore our academic offerings, engage with our vibrant alumni community, and be 
+  an active part of our journey towards innovation and engineering excellence. Together, we will continue 
+  to push the boundaries of knowledge and transform ideas into solutions that benefit society.
+</p>
 
                     <p className="text-lg font-medium">
                       Warm regards,<br />
-                      <span className="text-blue-600">Prof. Dr. Mohammad Shahriar</span><br />
+                      <span className="text-blue-600">A.H.M. Zadidul Karim</span><br />
                        Head of Department<br />
-                       Department of Pharmacy<br />
+                       Department of EEE<br />
                       University of Asia Pacific
                     </p>
                   </CardContent>
@@ -167,120 +166,8 @@ export default function MessageFromHeadPage() {
         </div>
       </AnimatedSection>
 
-      {/* Research Focus Areas */}
-      <AnimatedSection className="py-20 bg-gray-50" delay={0.4}>
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                 Research Excellence & Focus Areas
-               </h2>
-               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                 Our department's research initiatives span across cutting-edge areas of pharmaceutical sciences
-               </p>
-            </div>
+     
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                 <div className="flex items-center space-x-4 mb-4">
-                   <div className="p-3 bg-green-100 rounded-full text-green-600">
-                     <Lightbulb className="w-6 h-6" />
-                   </div>
-                   <h3 className="text-xl font-bold text-gray-900">Drug Discovery</h3>
-                 </div>
-                 <p className="text-gray-600">
-                   Advanced research in novel drug compounds and therapeutic agents for treating diseases.
-                 </p>
-               </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                 <div className="flex items-center space-x-4 mb-4">
-                   <div className="p-3 bg-blue-100 rounded-full text-blue-600">
-                     <Globe className="w-6 h-6" />
-                   </div>
-                   <h3 className="text-xl font-bold text-gray-900">Clinical Pharmacy</h3>
-                 </div>
-                 <p className="text-gray-600">
-                   Developing patient-centered pharmaceutical care and clinical decision-making solutions.
-                 </p>
-               </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                 <div className="flex items-center space-x-4 mb-4">
-                   <div className="p-3 bg-purple-100 rounded-full text-purple-600">
-                     <Target className="w-6 h-6" />
-                   </div>
-                   <h3 className="text-xl font-bold text-gray-900">Pharmaceutical Chemistry</h3>
-                 </div>
-                 <p className="text-gray-600">
-                   Ensuring drug quality and safety through advanced analytical and synthetic chemistry techniques.
-                 </p>
-               </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                 <div className="flex items-center space-x-4 mb-4">
-                   <div className="p-3 bg-orange-100 rounded-full text-orange-600">
-                     <BookOpen className="w-6 h-6" />
-                   </div>
-                   <h3 className="text-xl font-bold text-gray-900">Pharmacology</h3>
-                 </div>
-                 <p className="text-gray-600">
-                   Advancing drug action mechanisms and therapeutic effects for next-generation treatments.
-                 </p>
-               </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                 <div className="flex items-center space-x-4 mb-4">
-                   <div className="p-3 bg-red-100 rounded-full text-red-600">
-                     <Award className="w-6 h-6" />
-                   </div>
-                   <h3 className="text-xl font-bold text-gray-900">Pharmaceutical Technology</h3>
-                 </div>
-                 <p className="text-gray-600">
-                   Innovative drug formulation design and pharmaceutical manufacturing technologies.
-                 </p>
-               </Card>
-
-              <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                 <div className="flex items-center space-x-4 mb-4">
-                   <div className="p-3 bg-teal-100 rounded-full text-teal-600">
-                     <Users className="w-6 h-6" />
-                   </div>
-                   <h3 className="text-xl font-bold text-gray-900">Pharmaceutical Biotechnology</h3>
-                 </div>
-                 <p className="text-gray-600">
-                   Advanced biotechnological approaches for drug development and biopharmaceutical production.
-                 </p>
-               </Card>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-
-      {/* Call to Action */}
-      <AnimatedSection className="py-20 bg-gradient-to-r from-blue-900 to-green-900 text-white" delay={0.6}>
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-             Join Our Academic Excellence Journey
-           </h2>
-           <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-             Explore our programs, connect with our faculty, and become part of a community 
-             dedicated to advancing pharmaceutical sciences and healthcare.
-           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/about-us">
-               <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
-                 Learn More About Pharmacy
-               </Button>
-             </Link>
-            <Link href="/contact-us">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
-                Contact Department
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </AnimatedSection>
     </div>
   )
 }

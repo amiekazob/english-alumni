@@ -6,6 +6,10 @@ interface SEOMetadataProps {
   keywords?: string
   url?: string
   image?: string
+  type?: 'website' | 'article'
+  publishedTime?: string
+  author?: string
+  section?: string
 }
 
 export function generateMetadata({
@@ -13,28 +17,52 @@ export function generateMetadata({
   description,
   keywords,
   url,
-  image
+  image,
+  type = 'website',
+  publishedTime,
+  author,
+  section
 }: SEOMetadataProps): Metadata {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://uappaic.netlify.app'
+  const fullUrl = url ? `${baseUrl}${url}` : baseUrl
+  const fullImageUrl = image ? `${baseUrl}${image}` : `${baseUrl}/og-image.svg`
+
   return {
     title,
     description,
     keywords,
+    authors: author ? [{ name: author }] : undefined,
     openGraph: {
       title,
       description,
-      url,
-      images: image ? [{ url: image }] : undefined,
-      type: 'website',
-      siteName: 'UAP EEE Department'
+      url: fullUrl,
+      siteName: 'UAP EEE Alumni Portal',
+      images: [
+        {
+          url: fullImageUrl,
+          width: 1200,
+          height: 630,
+          alt: title,
+        }
+      ],
+      locale: 'en_US',
+      type,
+      ...(type === 'article' && {
+        publishedTime,
+        authors: author ? [author] : undefined,
+        section,
+      }),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: image ? [image] : undefined
+      images: [fullImageUrl],
+      creator: '@uap_eee_alumni',
+      site: '@uap_eee_alumni',
     },
     alternates: {
-      canonical: url
+      canonical: fullUrl
     }
   }
 }

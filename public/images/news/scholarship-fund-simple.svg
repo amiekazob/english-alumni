@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Simple background -->
+  <rect width="800" height="400" fill="#1e40af"/>
+  
+  <!-- Title -->
+  <text x="400" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="36" font-weight="bold">EEE Alumni Scholarship Fund</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="240" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18">Supporting Future Engineers</text>
+</svg>

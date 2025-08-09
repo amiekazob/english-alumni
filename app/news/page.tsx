@@ -6,8 +6,33 @@ import { Calendar, Clock, User } from 'lucide-react'
 import { newsData } from '@/lib/news-data'
 
 export const metadata: Metadata = {
-  title: 'News | Alumni Portal - Dept of Pharmacy, UAP',
-  description: 'Latest news and updates from the Department of Pharmacy, University of Asia Pacific alumni community.',
+  title: 'News | Alumni Portal - Dept of EEE, UAP',
+  description: 'Latest news and updates from the Department of Electrical and Electronic Engineering, University of Asia Pacific alumni community.',
+  keywords: 'EEE, UAP, alumni, news, engineering, electrical, electronic, updates',
+  openGraph: {
+    title: 'News | UAP EEE Alumni Portal',
+    description: 'Latest news and updates from the Department of Electrical and Electronic Engineering, University of Asia Pacific alumni community.',
+    url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/news`,
+    siteName: 'UAP EEE Alumni Portal',
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/images/hero/1.jpg`,
+        width: 1200,
+        height: 630,
+        alt: 'UAP EEE Alumni News',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'News | UAP EEE Alumni Portal',
+    description: 'Latest news and updates from the Department of Electrical and Electronic Engineering, University of Asia Pacific alumni community.',
+    images: [`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/images/hero/1.jpg`],
+    creator: '@uap_eee_alumni',
+    site: '@uap_eee_alumni',
+  },
 }
 
 // News data imported from lib/news-data.ts

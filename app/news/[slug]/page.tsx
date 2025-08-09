@@ -3,8 +3,10 @@ import { notFound } from 'next/navigation'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { LoadingLink } from '@/components/ui/loading-link'
+import { NewsSocialShare } from '@/components/news/news-social-share'
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react'
 import { newsData, NewsItem } from '@/lib/news-data'
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 
 interface NewsArticlePageProps {
   params: {
@@ -13,18 +15,26 @@ interface NewsArticlePageProps {
 }
 
 export async function generateMetadata({ params }: NewsArticlePageProps): Promise<Metadata> {
-  const article = newsData.find(item => item.slug === params.slug)
+  const { slug } = await params
+  const article = newsData.find(item => item.slug === slug)
   
   if (!article) {
     return {
-      title: 'Article Not Found | Alumni Portal - Dept of Pharmacy, UAP'
+      title: 'Article Not Found | Alumni Portal - Dept of EEE, UAP'
     }
   }
 
-  return {
-    title: `${article.title} | Alumni Portal - Dept of Pharmacy, UAP`,
+  return generateSEOMetadata({
+    title: `${article.title} | Alumni Portal - Dept of EEE, UAP`,
     description: article.excerpt,
-  }
+    keywords: `EEE, UAP, alumni, ${article.category.toLowerCase()}, engineering, electrical, electronic`,
+    url: `/news/${article.slug}`,
+    image: article.image,
+    type: 'article',
+    publishedTime: article.date,
+    author: article.author,
+    section: article.category,
+  })
 }
 
 export async function generateStaticParams() {
@@ -33,8 +43,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function NewsArticlePage({ params }: NewsArticlePageProps) {
-  const article = newsData.find(item => item.slug === params.slug)
+export default async function NewsArticlePage({ params }: NewsArticlePageProps) {
+  const { slug } = await params
+  const article = newsData.find(item => item.slug === slug)
 
   if (!article) {
     notFound()
@@ -95,12 +106,36 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
                 </p>
               </CardHeader>
               <CardContent>
+                {/* Article Image */}
+                <div className="mb-8">
+                  <img 
+                    src={article.image} 
+                    alt={article.title}
+                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                
                 <div className="prose prose-lg max-w-none">
                   {article.content.split('\n\n').map((paragraph, index) => (
                     <p key={index} className="mb-6 text-gray-700 leading-relaxed">
                       {paragraph}
                     </p>
                   ))}
+                </div>
+                
+                {/* Social Share Section */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-lg font-semibold text-gray-800">Share this article</h4>
+                    <NewsSocialShare
+                      slug={article.slug}
+                      title={article.title}
+                      excerpt={article.excerpt}
+                      category={article.category}
+                      variant="minimal"
+                      size="md"
+                    />
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -148,6 +183,17 @@ export default function NewsArticlePage({ params }: NewsArticlePageProps) {
           </div>
         </div>
       </section>
+      
+      {/* Floating Social Share */}
+      <NewsSocialShare
+        slug={article.slug}
+        title={article.title}
+        excerpt={article.excerpt}
+        category={article.category}
+        variant="floating"
+        size="md"
+        className="hidden lg:block"
+      />
     </div>
   )
 }

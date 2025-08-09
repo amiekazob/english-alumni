@@ -1,9 +1,13 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Users } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { Users, User, Building2, Mail, Linkedin, Facebook, Instagram, Globe } from 'lucide-react'
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
+import Image from 'next/image'
 import AlumniCard from '@/components/AlumniCard'
+import { VerificationBadge } from '@/components/ui/verification-badge'
+import { Card, CardContent } from '@/components/ui/card'
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
@@ -15,22 +19,22 @@ export const metadata: Metadata = generateSEOMetadata({
 
 async function getFeaturedAlumni() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/alumni`, {
+    const response = await fetch(`http://localhost:3000/api/featured-alumni`, {
       cache: 'no-store'
     })
     if (!response.ok) return []
     const result = await response.json()
     const alumni = result.success ? result.data : []
-    return alumni.slice(0, 3) // Get first 3 alumni as featured (already sorted by points)
+    return alumni.slice(0, 20) // Get first 20 featured alumni (already sorted by points)
   } catch (error) {
-    console.error('Error fetching alumni:', error)
+    console.error('Error fetching featured alumni:', error)
     return []
   }
 }
 
 async function getAlumniStats() {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/stats`, {
+    const response = await fetch(`http://localhost:3000/api/stats`, {
       cache: 'no-store'
     })
     if (!response.ok) {
@@ -77,11 +81,11 @@ export default async function Homepage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Welcome to 
               <span className="bg-gradient-to-r from-accent-400 to-accent-500 bg-clip-text text-transparent">
-                Pharmacy Department
+                EEE Department
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Discover our distinguished alumni network and connect with graduates who are making a difference in pharmaceutical sciences worldwide
+              Discover our distinguished alumni network and connect with graduates who are making a difference in electrical and electronic sciences worldwide
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/alumni">
@@ -123,7 +127,7 @@ export default async function Homepage() {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-3 group-hover:text-primary-700 transition-colors">{stats.distinguishedAlumni}+</div>
-              <div className="text-gray-600 font-medium text-lg">Distinguished Alumni</div>
+              <div className="text-gray-600 font-medium text-lg">Featured Alumni</div>
               <div className="text-sm text-gray-500 mt-2">Making impact worldwide</div>
             </div>
             
@@ -153,54 +157,164 @@ export default async function Homepage() {
       </div>
 
       {/* Featured Alumni */}
-      <div className="py-24 bg-white relative overflow-hidden">
+      <div className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         {/* Background Decoration */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-primary-50 to-transparent rounded-full opacity-50 -translate-y-48 translate-x-48" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-accent-50 to-transparent rounded-full opacity-50 translate-y-40 -translate-x-40" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-50 to-transparent rounded-full opacity-30 -translate-y-48 translate-x-48" />
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-indigo-50 to-transparent rounded-full opacity-30 translate-y-40 -translate-x-40" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full mb-6">
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-              </svg>
-            </div>
-            <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Featured 
-              <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
-                Alumni
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+              Featured  Alumni
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                
               </span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Meet some of our distinguished graduates who are making a difference in their fields and inspiring the next generation of pharmaceutical professionals
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Discover our distinguished alumni network and connect with graduates who are making a difference in engineering worldwide
             </p>
           </div>
           
           {featuredAlumni.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {featuredAlumni.map((alumni: any, index: number) => (
-                <div key={index} className="transform hover:scale-105 transition-all duration-300">
-                  <AlumniCard alumni={alumni} />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {featuredAlumni.slice(0, 20).map((alumni: any, index: number) => (
+                <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border border-gray-200">
+                  {/* Profile Image */}
+                  <div className="relative overflow-hidden">
+                    <div className="aspect-square relative bg-gradient-to-br from-blue-50 to-indigo-100">
+                      <Image
+                        src={`/images/feature_alumni/${alumni.Batch}/${alumni.Photo}`}
+                        alt={alumni.Name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  </div>
+                  
+                  <CardContent className="px-6 pt-6 pb-4">
+                    {/* Name and Batch */}
+                    <div className="text-center mb-4">
+                      <h3 className="font-bold text-xl text-gray-900 group-hover:text-blue-600 transition-colors mb-2 flex items-center justify-center gap-2">
+                        {alumni.Name}
+                        {/* Verification Badges */}
+                        {alumni.blue_verified === 1 && (
+                          <VerificationBadge type="blue_verified" size="md" />
+                        )}
+                        {alumni.verified === 1 && alumni.blue_verified !== 1 && (
+                          <VerificationBadge type="verified" size="md" />
+                        )}
+                      </h3>
+                      <Badge variant="default" className="mb-3">
+                        Batch {alumni.Batch}
+                      </Badge>
+                    </div>
+
+                    {/* Professional Information */}
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3">
+                        <User className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">{alumni.Position}</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start gap-3">
+                        <Building2 className="w-4 h-4 text-green-500 mt-1 flex-shrink-0" />
+                        <div>
+                          <p className="text-sm text-gray-600">{alumni.Institute}</p>
+                        </div>
+                      </div>
+                      
+                      {alumni.Country && (
+                        <div className="flex items-start gap-3">
+                          <Globe className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
+                          <div>
+                            <p className="text-sm text-gray-600">{alumni.Country}</p>
+                          </div>
+                        </div>
+                      )}
+                      
+                      {alumni.Email && (
+                        <div className="flex items-start gap-3">
+                          <Mail className="w-4 h-4 text-red-500 mt-1 flex-shrink-0" />
+                          <div>
+                            <a 
+                              href={`mailto:${alumni.Email}`}
+                              className="text-sm text-blue-600 hover:text-blue-800 transition-colors break-all"
+                            >
+                              {alumni.Email}
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Social Media Links */}
+                    {(alumni.LinkedIn || alumni.Facebook || alumni.Instagram) && (
+                      <div className="mt-4 pt-4 border-t border-gray-100">
+                        <div className="flex justify-center gap-4">
+                          {alumni.LinkedIn && (
+                            <Link 
+                              href={alumni.LinkedIn} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 transition-colors"
+                            >
+                              <Linkedin className="w-5 h-5" />
+                            </Link>
+                          )}
+                          {alumni.Facebook && (
+                            <Link 
+                              href={alumni.Facebook} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-blue-600 hover:text-blue-800 transition-colors"
+                            >
+                              <Facebook className="w-5 h-5" />
+                            </Link>
+                          )}
+                          {alumni.Instagram && (
+                            <Link 
+                              href={alumni.Instagram} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-pink-600 hover:text-pink-800 transition-colors"
+                            >
+                              <Instagram className="w-5 h-5" />
+                            </Link>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-12 h-12 text-gray-400" />
+            <div className="text-center py-12">
+              <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-10 h-10 text-gray-400" />
               </div>
-              <p className="text-xl text-gray-500 mb-4">No featured alumni available at the moment.</p>
+              <p className="text-lg text-gray-500 mb-2">No featured alumni available at the moment.</p>
               <p className="text-gray-400">Check back soon for updates!</p>
             </div>
           )}
           
           <div className="text-center">
-            <Link href="/alumni">
-              <Button size="lg" className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold text-lg px-12 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <Users className="w-6 h-6 mr-3" />
-                View All Alumni
-              </Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/featured-alumni">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                  <Users className="w-5 h-5 mr-2" />
+                  View All Featured Alumni
+                </Button>
+              </Link>
+              <Link href="/alumni">
+                <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300">
+                  <Users className="w-5 h-5 mr-2" />
+                  View All Alumni
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -221,7 +335,7 @@ export default async function Homepage() {
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-primary-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Connect with fellow graduates, share your achievements, and help shape the future of pharmaceutical education
+              Connect with fellow graduates, share your achievements, and help shape the future of electrical and electronic education
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

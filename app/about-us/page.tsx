@@ -40,19 +40,19 @@ interface Achievement {
 
 const milestones: Milestone[] = [
   {
-    year: '2008',
+    year: '2004',
     title: 'Department Establishment',
     description: 'The Department of Electrical and Electronic Engineering was established at University of Asia Pacific, beginning our journey of excellence in engineering education.',
     type: 'establishment'
   },
   {
-    year: '2012',
+    year: '2008',
     title: 'First Graduation Batch',
     description: 'Our first batch of EEE graduates completed their studies, marking the beginning of our distinguished alumni network.',
     type: 'achievement'
   },
   {
-    year: '2015',
+    year: '2018',
     title: 'Alumni Association Formation',
     description: 'Formal establishment of the EEE Alumni Association to strengthen connections and support current students.',
     type: 'expansion'
@@ -64,25 +64,25 @@ const milestones: Milestone[] = [
     type: 'achievement'
   },
   {
-    year: '2020',
+    year: '2025',
     title: 'Digital Alumni Portal',
     description: 'Introduced digital alumni portal to enhance communication, networking, and professional development opportunities.',
     type: 'expansion'
   },
   {
-    year: '2022',
+    year: '2025',
     title: 'Global Alumni Network',
     description: 'Expanded alumni network internationally with graduates working in leading companies across USA, Europe, Asia, and Middle East.',
     type: 'recognition'
   },
   {
-    year: '2023',
+    year: '2025',
     title: 'Alumni Scholarship Fund',
     description: 'Established alumni-funded scholarship program to support deserving students in their academic journey.',
     type: 'expansion'
   },
   {
-    year: '2024',
+    year: '2025',
     title: 'Alumni Excellence Awards',
     description: 'Launched annual alumni excellence awards recognizing outstanding achievements in professional, entrepreneurial, and social contributions.',
     type: 'achievement'
@@ -157,15 +157,15 @@ export default function AboutUsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Pharmacy Alumni Portal
+              EEE Alumni Portal
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Department of Pharmacy, University of Asia Pacific
+              Department of EEE, University of Asia Pacific
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5" />
-                <span>Established 1996</span>
+                <span>Established 2004</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Network className="w-5 h-5" />

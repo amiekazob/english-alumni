@@ -1,70 +1,112 @@
-# EEE UAP - Programming and AI Club Website
+# EEE Alumni Portal - University of Asia Pacific
 
-A modern, responsive website for the Programming and AI Club of the Department of Electrical and Electronic Engineering at the University of Asia Pacific.
+🎓 A comprehensive alumni portal for the Department of Electrical and Electronic Engineering (EEE) at the University of Asia Pacific, featuring alumni directory, events management, and community engagement tools.
 
-## 🚀 Features
+## 🌟 Features
 
-- **Modern Design**: Built with Next.js 15 and Tailwind CSS
-- **Responsive Layout**: Optimized for all devices
-- **Contact Form**: Integrated email functionality with Nodemailer
-- **Dynamic Content**: Committee profiles, news, events, and gallery
-- **SEO Optimized**: Meta tags, structured data, and sitemap
-- **Performance Optimized**: Image optimization and lazy loading
+- **Alumni Directory**: Browse and search through alumni profiles with filtering by batch, country, and verification status
+- **Featured Alumni**: Showcase distinguished alumni with detailed profiles
+- **Events Management**: Upcoming and past events with registration capabilities
+- **Committee Information**: Department committee members and their roles
+- **Academic Programs**: Information about BSc and MSc EEE programs
+- **Contact System**: Contact form with email integration
+- **Social Media Integration**: Share content across multiple platforms
+- **Responsive Design**: Mobile-first design with modern UI/UX
 
-## 🛠️ Tech Stack
+## 🚀 Tech Stack
 
-- **Framework**: Next.js 15 with App Router
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
 - **Styling**: Tailwind CSS
-- **UI Components**: Radix UI primitives
-- **Email**: Nodemailer with Gmail SMTP
+- **UI Components**: Radix UI + Custom Components
 - **Icons**: Lucide React
-- **Animations**: Framer Motion
-- **TypeScript**: Full type safety
+- **Data Processing**: XLSX for Excel file handling
+- **Email**: Nodemailer
+- **Deployment**: Netlify
 
-## 📦 Installation
+## 📋 Prerequisites
 
-1. Clone the repository:
+- Node.js 18 or higher
+- npm or yarn package manager
+- Git
+
+## 🛠️ Installation & Setup
+
+### 1. Clone the Repository
+
 ```bash
-git clone <your-repo-url>
-cd eee-uap
+git clone https://github.com/amiekazob/alumni-eee.git
+cd alumni-eee
 ```
 
-2. Install dependencies:
+### 2. Install Dependencies
+
 ```bash
 npm install
+# or
+yarn install
 ```
 
-3. Create environment variables:
-```bash
-cp .env.example .env.local
-```
+### 3. Environment Variables
 
-4. Configure email settings in `.env.local`:
+Create a `.env.local` file in the root directory:
+
 ```env
-EMAIL_USER=your-gmail@gmail.com
+# Email Configuration (for contact form)
+EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-app-password
+
+# Base URL (for production)
+NEXT_PUBLIC_BASE_URL=https://your-domain.com
 ```
 
-5. Run the development server:
+### 4. Data Setup
+
+Place your Excel files in the `data/` directory:
+- `alumni_new.xlsx` - Main alumni data
+- `featured_alumni.xlsx` - Featured alumni data
+
+### 5. Run Development Server
+
 ```bash
 npm run dev
+# or
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the website.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+```
+alumni-eee/
+├── app/                    # Next.js app router pages
+│   ├── api/               # API routes
+│   ├── alumni/            # Alumni pages
+│   ├── featured-alumni/   # Featured alumni pages
+│   └── ...
+├── components/             # Reusable components
+│   ├── ui/                # UI primitives
+│   ├── layout/            # Layout components
+│   └── home/              # Home page components
+├── lib/                   # Utility functions and data
+├── data/                  # Excel data files
+├── public/                # Static assets
+├── styles/                # Global styles
+└── ...
+```
 
 ## 🚀 Deployment
 
 ### GitHub Setup
 
-1. Create a new repository on GitHub
-2. Push your code:
-```bash
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin <your-repo-url>
-git push -u origin main
-```
+1. **Create Repository**: Create a new repository on GitHub
+2. **Push Code**:
+   ```bash
+   git remote add origin https://github.com/amiekazob/alumni-eee.git
+   git branch -M main
+   git push -u origin main
+   ```
 
 ### Netlify Deployment
 
@@ -76,57 +118,88 @@ git push -u origin main
 2. **Build Settings**:
    - Build command: `npm run build`
    - Publish directory: `.next`
-   - Node version: 18
+   - Node version: `18`
 
 3. **Environment Variables**:
-   Add these in Netlify Dashboard → Site Settings → Environment Variables:
+   Add the following in Netlify dashboard:
    ```
-   EMAIL_USER=your-gmail@gmail.com
+   EMAIL_USER=your-email@gmail.com
    EMAIL_PASS=your-app-password
+   NEXT_PUBLIC_BASE_URL=https://your-netlify-domain.netlify.app
    ```
 
-4. **Deploy**:
-   - Click "Deploy site"
-   - Your site will be available at `https://your-site-name.netlify.app`
+4. **Deploy**: Click "Deploy site"
 
-## 📧 Email Configuration
+### Custom Domain (Optional)
 
-For the contact form to work, you need to set up Gmail SMTP:
+1. In Netlify dashboard, go to "Domain settings"
+2. Add your custom domain
+3. Update DNS records as instructed
+4. Update `NEXT_PUBLIC_BASE_URL` environment variable
 
-1. Enable 2-factor authentication on your Gmail account
-2. Generate an App Password:
-   - Go to Google Account settings
-   - Security → 2-Step Verification → App passwords
-   - Generate password for "Mail"
-3. Use the generated password in `EMAIL_PASS`
+## 📊 Data Management
 
-## 🔧 Available Scripts
+### Alumni Data Format
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+The Excel files should contain the following columns:
 
-## 📁 Project Structure
+**alumni_new.xlsx**:
+- Name, Batch, Position, Institute, Email, Photo, Point, LinkedIn, Facebook, Instagram, verified, blue_verified, Country
 
-```
-eee-uap/
-├── app/                    # Next.js app router pages
-├── components/             # Reusable components
-│   ├── ui/                # UI primitives
-│   ├── layout/            # Layout components
-│   └── home/              # Home page components
-├── lib/                   # Utility functions and data
-├── public/                # Static assets
-└── styles/                # Global styles
-```
+**featured_alumni.xlsx**:
+- Name, Batch, Position, Institute, Email, Photo, Point, LinkedIn, Facebook, Instagram, verified, blue_verified, Country
+
+### Adding New Alumni
+
+1. Update the respective Excel file
+2. Redeploy the application
+3. Data will be automatically loaded from the Excel files
+
+## 🔧 Configuration
+
+### Email Setup
+
+1. **Gmail Setup**:
+   - Enable 2-factor authentication
+   - Generate an app password
+   - Use the app password in `EMAIL_PASS`
+
+2. **Other Email Providers**:
+   - Update the transporter configuration in `app/api/contact/route.ts`
+
+### Social Media
+
+- Configure social media sharing in `lib/social-media-api.ts`
+- Update default hashtags and platform configurations
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Build Errors**:
+   - Check TypeScript errors: `npm run lint`
+   - Verify all dependencies are installed
+
+2. **Excel File Issues**:
+   - Ensure Excel files are in the correct format
+   - Check file paths in API routes
+
+3. **Email Not Working**:
+   - Verify environment variables
+   - Check email provider settings
+
+4. **Images Not Loading**:
+   - Ensure images are in the `public/` directory
+   - Check image paths and formats
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
+2. Create a feature branch: `git checkout -b feature/new-feature`
 3. Make your changes
-4. Submit a pull request
+4. Commit: `git commit -m 'Add new feature'`
+5. Push: `git push origin feature/new-feature`
+6. Submit a pull request
 
 ## 📄 License
 
@@ -136,6 +209,10 @@ This project is licensed under the MIT License.
 
 - **Club Email**: paiclubeee@uap-bd.edu
 - **Department**: EEE, University of Asia Pacific
-- **Website**: [Your deployed URL]
+- **GitHub**: [https://github.com/amiekazob/alumni-eee](https://github.com/amiekazob/alumni-eee)
 
-Designed and developed by Subodh Chandra Shil
+---
+
+**Designed and developed by Subodh Chandra Shil**
+
+*Programming & AI Club, Department of EEE, University of Asia Pacific*

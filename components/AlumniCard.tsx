@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Mail, Building, User, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Mail, Building, User, Linkedin, Facebook, Instagram, Globe } from 'lucide-react';
 import Image from 'next/image';
+import { VerificationBadge } from '@/components/ui/verification-badge';
 
 export interface AlumniMember {
   Name: string;
@@ -17,6 +18,9 @@ export interface AlumniMember {
   LinkedIn?: string;
   Facebook?: string;
   Instagram?: string;
+  verified?: number;
+  blue_verified?: number;
+  Country?: string;
 }
 
 interface AlumniCardProps {
@@ -32,12 +36,12 @@ export default function AlumniCard({ alumni }: AlumniCardProps) {
       <div className="relative h-72 overflow-hidden bg-gray-200">
         {alumni.Photo && !imageError ? (
           <Image
-            src={`/images/alumni/${alumni.Batch}/${alumni.Photo}`}
+            src={`/images/feature_alumni/${alumni.Batch}/${alumni.Photo}`}
             alt={alumni.Name}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
             onError={() => {
-              console.error(`Failed to load image: /images/alumni/${alumni.Batch}/${alumni.Photo}`);
+              console.error(`Failed to load image: /images/feature_alumni/${alumni.Batch}/${alumni.Photo}`);
               setImageError(true);
             }}
             loading="lazy"
@@ -54,8 +58,15 @@ export default function AlumniCard({ alumni }: AlumniCardProps) {
       <CardContent className="px-6 pt-6 pb-4">
         {/* Name and Batch */}
         <div className="text-center mb-4">
-          <h3 className="font-bold text-xl text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+          <h3 className="font-bold text-xl text-gray-900 group-hover:text-blue-600 transition-colors mb-2 flex items-center justify-center gap-2">
             {alumni.Name}
+            {/* Verification Badges */}
+            {alumni.blue_verified === 1 && (
+              <VerificationBadge type="blue_verified" size="md" />
+            )}
+            {alumni.verified === 1 && alumni.blue_verified !== 1 && (
+              <VerificationBadge type="verified" size="md" />
+            )}
           </h3>
           <Badge variant="default" className="mb-3">
             Batch {alumni.Batch}
@@ -77,6 +88,15 @@ export default function AlumniCard({ alumni }: AlumniCardProps) {
               <p className="text-sm text-gray-600">{alumni.Institute}</p>
             </div>
           </div>
+          
+          {alumni.Country && (
+            <div className="flex items-start gap-3">
+              <Globe className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-sm text-gray-600">{alumni.Country}</p>
+              </div>
+            </div>
+          )}
           
           <div className="flex items-start gap-3">
             <Mail className="w-4 h-4 text-purple-500 mt-1 flex-shrink-0" />

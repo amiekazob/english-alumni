@@ -60,7 +60,7 @@ export function Navbar() {
               </div>
               <div className="flex flex-col" suppressHydrationWarning={true}>
                 <span className="text-lg font-bold text-gray-900">Alumni Portal</span>
-                <span className="text-sm text-gray-600">Dept of Pharmacy, University of Asia Pacific</span>
+                <span className="text-sm text-gray-600">Dept of EEE, University of Asia Pacific</span>
               </div>
             </LoadingLink>
 

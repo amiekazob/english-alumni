@@ -13,89 +13,90 @@ export interface NewsItem {
 
 export const newsData: NewsItem[] = [
   {
-    id: "1",
-    title: "Dr. Sarah Ahmed Receives International Excellence Award in Pharmaceutical Research",
-    excerpt: "Our distinguished alumna Dr. Sarah Ahmed from the 3rd batch has been honored with the prestigious International Excellence Award for her groundbreaking research in drug delivery systems.",
-    content: `Dr. Sarah Ahmed, a proud graduate of the Department of Pharmacy at University of Asia Pacific (3rd batch), has been awarded the International Excellence Award in Pharmaceutical Research by the Global Pharmaceutical Research Council.
+  id: "1",
+  title: "Dr. Sultan Mahmud Wins International Excellence Award in Renewable Energy Innovation",
+  excerpt: "Our distinguished alumnus Dr. Sultan Mahmud from the 13th batch has been honored with the prestigious International Excellence Award for his groundbreaking work in solar energy optimization and smart grid technology.",
+  content: `Dr. Sultan Mahmud, a proud graduate of the Department of Electrical and Electronic Engineering at the University of Asia Pacific (13th batch), has been awarded the International Excellence Award in Renewable Energy Innovation by the Global Energy Research Council.
 
-Dr. Ahmed's revolutionary work on targeted drug delivery systems for cancer treatment has shown remarkable results in clinical trials, with a 40% improvement in treatment efficacy and significantly reduced side effects. Her research focuses on nanoparticle-based drug carriers that can precisely target cancer cells while minimizing damage to healthy tissue.
+Dr. Mahmud's pioneering research on AI-driven solar energy optimization and smart grid integration has significantly improved energy efficiency in large-scale renewable power plants. His innovative algorithms can boost solar farm output by up to 35% while reducing operational costs and improving grid stability.
 
-"This achievement is not just mine, but a testament to the strong foundation I received at UAP's Pharmacy Department," said Dr. Ahmed during the award ceremony. "The rigorous training and research opportunities provided by our faculty prepared me for this journey in pharmaceutical innovation."
+"This achievement is not just mine, but a testament to the strong foundation I received at UAP's EEE Department," said Dr. Mahmud during the award ceremony. "The rigorous academic training and hands-on project opportunities provided by our faculty prepared me to tackle real-world engineering challenges."
 
-Currently serving as the Lead Research Scientist at BioPharma Innovations Inc. in Boston, Dr. Ahmed has published over 25 peer-reviewed papers and holds 8 patents in pharmaceutical technology. Her work has been cited over 1,200 times in international journals.
+Currently serving as the Chief Renewable Energy Engineer at GreenTech Power Solutions in Singapore, Dr. Mahmud has published over 20 peer-reviewed papers and holds 6 patents in renewable energy and smart grid technology. His work has been cited over 1,000 times in international energy and engineering journals.
 
-Dr. Ahmed's success story continues to inspire current students and fellow alumni, demonstrating the global impact that UAP Pharmacy graduates are making in the pharmaceutical industry.`,
-    category: "Achievement",
-    date: "2024-01-15",
-    readTime: "3 min read",
-    author: "Alumni Relations Office",
-    slug: "dr-sarah-ahmed-international-excellence-award",
-    image: "/images/news/sarah-ahmed-award.jpg"
-  },
-  {
-    id: "2",
-    title: "Alumnus Launches Revolutionary Healthcare Startup in Silicon Valley",
-    excerpt: "Mohammad Rahman (5th batch) co-founded MediTech Solutions, a startup that uses AI to optimize pharmaceutical supply chains, recently securing $2.5 million in Series A funding.",
-    content: `Mohammad Rahman, a 2019 graduate from our Department of Pharmacy, has made headlines in the tech world by co-founding MediTech Solutions, an innovative startup that leverages artificial intelligence to revolutionize pharmaceutical supply chain management.
+Dr. Mahmud's success story continues to inspire current students and fellow alumni, showcasing the global impact that UAP EEE graduates are making in the field of renewable energy and sustainable technology.`,
+  category: "Achievement",
+  date: "2024-01-15",
+  readTime: "3 min read",
+  author: "Alumni Relations Office",
+  slug: "dr-sultan-mahmud-renewable-energy-award",
+  image: "/images/news/sultan-mahmud-award.svg"
+},
+ {
+  id: "2",
+  title: "Alumnus Launches Pioneering Renewable Energy Startup in Bangladesh",
+  excerpt: "Fahim Hasan (5th batch) co-founded SolarGrid Innovations, a startup that uses AI to optimize solar power distribution networks, recently securing 2.5 crore BDT in seed funding.",
+  content: `Fahim Hasan, a 2019 graduate from our Department of Electrical and Electronic Engineering, has made waves in Bangladesh's energy sector by co-founding SolarGrid Innovations, an ambitious startup dedicated to revolutionizing renewable energy management through artificial intelligence.
 
-The company, based in Silicon Valley, recently completed its Series A funding round, raising $2.5 million from prominent venture capital firms. MediTech Solutions' proprietary AI platform helps pharmaceutical companies reduce waste, optimize inventory, and ensure timely delivery of critical medications to healthcare facilities.
+The company, headquartered in Dhaka, recently secured 2.5 crore BDT in seed funding from leading impact investors. SolarGrid Innovations' proprietary AI platform analyzes real-time solar generation data to optimize power distribution, reduce wastage, and enhance the reliability of off-grid and on-grid renewable systems.
 
-"During my time at UAP, I learned not just about pharmaceuticals, but also about the broader healthcare ecosystem," Rahman explained. "I saw firsthand how supply chain inefficiencies could impact patient care, and that inspired me to find a technological solution."
+"During my time at UAP, I not only gained technical knowledge but also developed a passion for sustainable technology," Hasan explained. "I saw how energy inefficiency was holding back communities, and I wanted to create a solution that empowers both households and industries."
 
-The startup's platform has already been adopted by three major pharmaceutical distributors and has demonstrated a 30% reduction in supply chain costs while improving delivery reliability by 45%. The company plans to expand its operations across Asia and Europe with the new funding.
+The startup's platform has already been implemented in three major solar microgrid projects in rural Bangladesh, achieving a 28% increase in power utilization efficiency and a 40% reduction in downtime. With the new funding, the company plans to expand its services to urban rooftop solar networks and industrial renewable installations.
 
-Rahman's journey from a pharmacy student in Dhaka to a successful entrepreneur in Silicon Valley showcases the global opportunities available to our graduates and their potential to drive innovation in healthcare technology.`,
-    category: "Entrepreneurship",
-    date: "2024-01-10",
-    readTime: "4 min read",
-    author: "Career Development Office",
-    slug: "mohammad-rahman-meditech-solutions-startup",
-    image: "/images/news/rahman-startup.jpg"
-  },
-  {
-    id: "3",
-    title: "Alumni Network Establishes Scholarship Fund for Underprivileged Students",
-    excerpt: "The UAP Pharmacy Alumni Association has launched a scholarship program worth BDT 10 lakhs annually to support talented students from economically disadvantaged backgrounds.",
-    content: `The UAP Pharmacy Alumni Association has announced the establishment of the 'Excellence Through Opportunity' scholarship fund, a landmark initiative that will provide financial support to deserving students from underprivileged backgrounds.
+Hasan's journey from an engineering student at UAP to a renewable energy entrepreneur demonstrates the potential of our graduates to drive innovation and create sustainable solutions that impact lives across the nation.`,
+  category: "Entrepreneurship",
+  date: "2024-01-10",
+  readTime: "4 min read",
+  author: "Career Development Office",
+  slug: "fahim-hasan-solargrid-innovations",
+  image: "/images/news/fahim-hasan-solargrid.svg"
+},
+{
+  id: "3",
+  title: "EEE Alumni Network Establishes Scholarship Fund for Underprivileged Engineering Students",
+  excerpt: "The UAP EEE Alumni Association has launched a scholarship program worth BDT 10 lakhs annually to support talented students from economically disadvantaged backgrounds.",
+  content: `The UAP EEE Alumni Association has announced the establishment of the 'Empowering Engineers' scholarship fund, a landmark initiative aimed at providing financial support to deserving students from underprivileged backgrounds.
 
-The scholarship program, with an annual fund of BDT 10 lakhs, will support up to 20 students each year, covering tuition fees, laboratory costs, and essential academic materials. The initiative was spearheaded by alumni from the first five batches, who collectively contributed to create this sustainable support system.
+The scholarship program, with an annual fund of BDT 10 lakhs, will support up to 20 students each year, covering tuition fees, laboratory expenses, project materials, and essential academic resources. The initiative was spearheaded by alumni from the first five batches, who came together to create a sustainable support system for future engineers.
 
-"Education should never be limited by financial constraints," said Ms. Fatima Khan (2nd batch), President of the Alumni Association. "This scholarship represents our commitment to ensuring that talented students have the opportunity to pursue their dreams in pharmaceutical sciences."
+"Access to quality engineering education should not be determined by financial circumstances," said Engr. Farhana Rahman (2nd batch), President of the Alumni Association. "This scholarship reflects our commitment to ensuring that talented students can pursue their ambitions in electrical and electronic engineering without barriers."
 
-The selection process will be merit-based, with special consideration for students demonstrating academic excellence despite financial hardships. Recipients will also receive mentorship from successful alumni working in various sectors of the pharmaceutical industry.
+The selection process will be merit-based, with special consideration for students demonstrating exceptional academic performance despite financial hardships. In addition to financial assistance, recipients will receive mentorship from accomplished alumni working in diverse sectors such as power and energy, telecommunications, automation, and renewable energy.
 
-The first batch of scholarship recipients will be announced in March 2024, with applications opening next month. This initiative reflects the strong bond within our alumni community and their dedication to giving back to the institution that shaped their careers.
+The first batch of scholarship recipients will be announced in March 2024, with applications opening next month. This initiative highlights the unity within our alumni community and their dedication to giving back to the department that laid the foundation for their careers.
 
-The scholarship fund also includes provisions for research grants, enabling students to participate in innovative projects and present their work at national and international conferences.`,
-    category: "Community",
-    date: "2024-01-05",
-    readTime: "3 min read",
-    author: "Alumni Relations Office",
-    slug: "alumni-scholarship-fund-announcement",
-    image: "/images/news/scholarship-fund.jpg"
-  },
-  {
-    id: "4",
-    title: "Research Collaboration Between Alumni Leads to Breakthrough in Diabetes Treatment",
-    excerpt: "A collaborative research project between Dr. Aminul Islam (2nd batch) and Dr. Rashida Begum (4th batch) has resulted in a novel insulin formulation that could transform diabetes care.",
-    content: `A groundbreaking collaboration between two of our distinguished alumni has yielded promising results in diabetes treatment research. Dr. Aminul Islam (2nd batch) from Johns Hopkins University and Dr. Rashida Begum (4th batch) from the International Centre for Diarrhoeal Disease Research, Bangladesh (icddr,b) have developed an innovative insulin formulation that could significantly improve the lives of diabetes patients.
+The scholarship fund also includes provisions for innovation grants, enabling students to develop cutting-edge projects, participate in competitions, and present their work at national and international engineering conferences.`,
+  category: "Community",
+  date: "2024-01-05",
+  readTime: "3 min read",
+  author: "Alumni Relations Office",
+  slug: "eee-alumni-scholarship-fund-announcement",
+  image: "/images/news/eee-scholarship-fund.svg"
+},
+{
+  id: "4",
+  title: "Research Collaboration Between Alumni Leads to Breakthrough in Smart Grid Technology",
+  excerpt: "A collaborative research project between Engr. Aminul Islam (2nd batch) and Engr. Rashida Begum (4th batch) has resulted in a next-generation smart grid control system that could transform Bangladesh's power distribution network.",
+  content: `A groundbreaking collaboration between two of our distinguished alumni has yielded a major advancement in smart grid technology. Engr. Aminul Islam (2nd batch) from the National University of Singapore and Engr. Rashida Begum (4th batch) from the Bangladesh University of Engineering and Technology (BUET) have jointly developed an AI-driven control system that significantly enhances the efficiency and reliability of national power grids.
 
-Their research, published in the prestigious Journal of Pharmaceutical Sciences, describes a new long-acting insulin formulation that maintains stable blood glucose levels for up to 48 hours with a single injection. This breakthrough could reduce the frequency of insulin injections for Type 1 diabetes patients from multiple daily doses to just three times per week.
+Their research, published in the prestigious IEEE Transactions on Smart Grid, introduces a next-generation real-time grid optimization algorithm capable of reducing transmission losses by up to 28% while improving load balancing across multiple regions. This innovation has the potential to drastically reduce power outages and improve the stability of renewable energy integration.
 
-"Our collaboration began during an alumni reunion where we discovered our shared interest in diabetes research," explained Dr. Islam. "Combining our expertise in pharmaceutical formulation and clinical research has been incredibly rewarding."
+"Our collaboration began during an alumni networking event where we discovered our shared passion for sustainable energy systems," explained Engr. Islam. "Combining our expertise in AI algorithms and power systems engineering has been incredibly rewarding."
 
-The formulation uses a novel polymer-based delivery system that releases insulin gradually, mimicking the natural insulin production pattern of a healthy pancreas. Clinical trials involving 200 patients showed a 25% improvement in glycemic control compared to conventional insulin therapies.
+The system uses advanced predictive analytics to forecast energy demand and automatically adjust grid parameters, ensuring optimal power flow even during peak load periods. Field tests conducted with Bangladesh Power Development Board (BPDB) demonstrated a 22% improvement in overall grid efficiency compared to current systems.
 
-Dr. Begum added, "This project demonstrates the power of our alumni network in advancing healthcare solutions. We're now working with pharmaceutical companies to bring this innovation to market."
+Engr. Begum added, "This project showcases the strength of our alumni network in driving technological innovation. We are now in discussions with government agencies and private sector partners to deploy the system nationwide."
 
-The research has attracted international attention, with several pharmaceutical giants expressing interest in licensing the technology. The success of this collaboration has inspired the establishment of an alumni research network to facilitate future joint projects.`,
-    category: "Research",
-    date: "2023-12-28",
-    readTime: "4 min read",
-    author: "Research Office",
-    slug: "diabetes-treatment-breakthrough-alumni-collaboration",
-    image: "/images/news/diabetes-research.jpg"
-  }
+The research has attracted significant attention from international renewable energy firms, with several expressing interest in piloting the technology in Southeast Asia. The success of this collaboration has inspired the creation of an alumni research consortium to facilitate more joint engineering projects in the future.`,
+  category: "Research",
+  date: "2023-12-28",
+  readTime: "4 min read",
+  author: "Research Office",
+  slug: "smart-grid-breakthrough-alumni-collaboration",
+  image: "/images/news/smart-grid-research.svg"
+}
+
 ];
 
 export default newsData;

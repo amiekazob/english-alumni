@@ -16,7 +16,8 @@
 [build.environment]
   NODE_VERSION = "18"
   NPM_VERSION = "9"
-  NEXT_PUBLIC_BASE_URL = "https://alumni-pharm.netlify.app"
+  NEXT_PUBLIC_BASE_URL = "https://alumni-eee.netlify.app"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 [[redirects]]
   from = "/our-alumni-and-student-in-entrepreneurship/*"

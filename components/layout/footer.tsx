@@ -20,8 +20,8 @@ export function Footer() {
                 <img src="/images/logo.png" alt="Pharmacy Alumni Logo" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="flex flex-col" suppressHydrationWarning={true}>
-                <span className="font-bold text-lg text-white">Pharmacy Alumni Association</span>
-                <span className="text-xs text-gray-300">Dept. of Pharmacy - University of Asia Pacific</span>
+                <span className="font-bold text-lg text-white">EEE Alumni Association</span>
+                <span className="text-xs text-gray-300">Dept. of EEE - University of Asia Pacific</span>
               </div>
             </Link>
             <p className="text-sm max-w-xs text-gray-300">
@@ -87,11 +87,6 @@ export function Footer() {
           <StaggeredItem className="space-y-4" suppressHydrationWarning={true}>
             <h3 className="font-semibold text-white">News & Events</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <Link href="/press-release" className="hover:text-white transition-colors">
-                  Press Release
-                </Link>
-              </li>
 
               <li>
                 <Link href="/upcoming-events" className="hover:text-white transition-colors">
@@ -110,14 +105,9 @@ export function Footer() {
           <StaggeredItem className="space-y-4" suppressHydrationWarning={true}>
             <h3 className="font-semibold text-white">Alumni Life</h3>
             <ul className="space-y-2 text-sm text-gray-300">
-              <li>
-                <Link href="/pharmacy-life" className="hover:text-white transition-colors">
-                  Pharmacy Life
-                </Link>
-              </li>
 
               <li>
-                <Link href="/join-alumni" className="hover:text-white transition-colors">
+                <Link href="/registration" className="hover:text-white transition-colors">
                   Join Alumni Network
                 </Link>
               </li>
@@ -135,7 +125,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="mailto:pharmacy.alumni@uap-bd.edu" className="hover:text-white transition-colors">
-                  pharmacy.alumni@uap-bd.edu
+                  alumni-eee@uap-bd.edu
                 </a>
               </li>
               <li>
@@ -181,7 +171,7 @@ export function Footer() {
         <AnimatedSection animation="fadeIn" delay={0.5} className="mt-12 pt-8 border-t border-primary-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0" suppressHydrationWarning={true}>
             <p className="text-sm text-gray-400">
-              {siteConfig.name} © All rights reserved.
+              © All rights reserved.
             </p>
             <p className="text-sm text-gray-400">
             

@@ -1,0 +1,126 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#fefce8"/>
+  
+  <!-- Header Background -->
+  <rect width="800" height="80" fill="#7c3aed"/>
+  
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
+    Smart Grid Technology Breakthrough
+  </text>
+  <text x="400" y="60" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="16">
+    AI-Driven Grid Optimization Research
+  </text>
+  
+  <!-- Power Grid Network -->
+  <g transform="translate(50, 100)">
+    <!-- Power Lines -->
+    <g stroke="#374151" stroke-width="3" fill="none">
+      <!-- Main transmission lines -->
+      <line x1="100" y1="50" x2="300" y2="50"/>
+      <line x1="300" y1="50" x2="500" y2="50"/>
+      <line x1="500" y1="50" x2="700" y2="50"/>
+      
+      <!-- Distribution lines -->
+      <line x1="200" y1="50" x2="200" y2="120"/>
+      <line x1="400" y1="50" x2="400" y2="120"/>
+      <line x1="600" y1="50" x2="600" y2="120"/>
+      
+      <!-- Cross connections -->
+      <line x1="200" y1="120" x2="400" y2="120"/>
+      <line x1="400" y1="120" x2="600" y2="120"/>
+    </g>
+    
+    <!-- Power Stations -->
+    <g fill="#fbbf24">
+      <rect x="90" y="40" width="20" height="20" rx="2"/>
+      <rect x="690" y="40" width="20" height="20" rx="2"/>
+    </g>
+    
+    <!-- Substations -->
+    <g fill="#3b82f6">
+      <circle cx="300" cy="50" r="8"/>
+      <circle cx="500" cy="50" r="8"/>
+      <circle cx="200" cy="120" r="6"/>
+      <circle cx="400" cy="120" r="6"/>
+      <circle cx="600" cy="120" r="6"/>
+    </g>
+    
+    <!-- AI Control Centers -->
+    <g fill="#8b5cf6">
+      <rect x="190" y="30" width="20" height="15" rx="3"/>
+      <rect x="390" y="30" width="20" height="15" rx="3"/>
+      <rect x="590" y="30" width="20" height="15" rx="3"/>
+    </g>
+  </g>
+  
+  <!-- Data Flow Visualization -->
+  <g transform="translate(100, 250)">
+    <!-- Data Nodes -->
+    <circle cx="100" cy="30" r="15" fill="#10b981" opacity="0.8"/>
+    <circle cx="200" cy="30" r="15" fill="#10b981" opacity="0.8"/>
+    <circle cx="300" cy="30" r="15" fill="#10b981" opacity="0.8"/>
+    <circle cx="400" cy="30" r="15" fill="#10b981" opacity="0.8"/>
+    <circle cx="500" cy="30" r="15" fill="#10b981" opacity="0.8"/>
+    <circle cx="600" cy="30" r="15" fill="#10b981" opacity="0.8"/>
+    
+    <!-- Data Flow Lines -->
+    <g stroke="#10b981" stroke-width="2" fill="none" opacity="0.6">
+      <path d="M115 30 Q150 20 185 30"/>
+      <path d="M215 30 Q250 20 285 30"/>
+      <path d="M315 30 Q350 20 385 30"/>
+      <path d="M415 30 Q450 20 485 30"/>
+      <path d="M515 30 Q550 20 585 30"/>
+    </g>
+    
+    <!-- Data Labels -->
+    <text x="100" y="55" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Load</text>
+    <text x="200" y="55" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Gen</text>
+    <text x="300" y="55" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">AI</text>
+    <text x="400" y="55" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Opt</text>
+    <text x="500" y="55" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Ctrl</text>
+    <text x="600" y="55" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10">Grid</text>
+  </g>
+  
+  <!-- Researchers Info -->
+  <text x="200" y="320" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Engr. Aminul Islam
+  </text>
+  <text x="200" y="340" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">
+    NUS - 2nd Batch
+  </text>
+  
+  <text x="600" y="320" text-anchor="middle" fill="#1f2937" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Engr. Rashida Begum
+  </text>
+  <text x="600" y="340" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="14">
+    BUET - 4th Batch
+  </text>
+  
+  <!-- Collaboration Arrow -->
+  <g transform="translate(350, 320)">
+    <line x1="-100" y1="0" x2="100" y2="0" stroke="#7c3aed" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <text x="0" y="-10" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="14" font-weight="bold">
+      Collaboration
+    </text>
+  </g>
+  
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7c3aed"/>
+    </marker>
+  </defs>
+  
+  <!-- Performance Metrics -->
+  <text x="400" y="370" text-anchor="middle" fill="#7c3aed" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    28% Transmission Loss Reduction • 22% Grid Efficiency Improvement
+  </text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="150" r="3" fill="#fbbf24" opacity="0.4"/>
+  <circle cx="750" cy="180" r="4" fill="#10b981" opacity="0.3"/>
+  <circle cx="80" cy="350" r="2" fill="#7c3aed" opacity="0.5"/>
+  <circle cx="720" cy="320" r="3" fill="#3b82f6" opacity="0.4"/>
+</svg>

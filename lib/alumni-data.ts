@@ -11,6 +11,8 @@ export interface AlumniMember {
     instagram?: string
   }
   image?: string
+  verified?: number
+  blue_verified?: number
 }
 
 export const alumniData: AlumniMember[] = [
@@ -26,7 +28,8 @@ export const alumniData: AlumniMember[] = [
       linkedin: "https://linkedin.com/in/sudeshna-khan",
       facebook: "https://facebook.com/sudeshna.khan",
       instagram: "https://instagram.com/sudeshna_khan"
-    }
+    },
+    blue_verified: 1
   },
   {
     id: "2",
@@ -40,7 +43,8 @@ export const alumniData: AlumniMember[] = [
       linkedin: "https://linkedin.com/in/ashafull-alam",
       facebook: "https://facebook.com/ashafull.alam",
       instagram: "https://instagram.com/ashafull_alam"
-    }
+    },
+    verified: 1
   },
   {
     id: "3",
