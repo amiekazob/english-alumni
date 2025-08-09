@@ -19,7 +19,13 @@ export const metadata: Metadata = generateSEOMetadata({
 
 async function getFeaturedAlumni() {
   try {
-    const response = await fetch(`http://localhost:3000/api/featured-alumni`, {
+    const baseUrl = process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : process.env.NODE_ENV === 'production' 
+        ? 'https://alumni-eee.vercel.app'
+        : 'http://localhost:3000'
+    
+    const response = await fetch(`${baseUrl}/api/featured-alumni`, {
       cache: 'no-store'
     })
     if (!response.ok) return []
@@ -34,7 +40,13 @@ async function getFeaturedAlumni() {
 
 async function getAlumniStats() {
   try {
-    const response = await fetch(`http://localhost:3000/api/stats`, {
+    const baseUrl = process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : process.env.NODE_ENV === 'production' 
+        ? 'https://alumni-eee.vercel.app'
+        : 'http://localhost:3000'
+    
+    const response = await fetch(`${baseUrl}/api/stats`, {
       cache: 'no-store'
     })
     if (!response.ok) {
