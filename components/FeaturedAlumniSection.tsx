@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { VerificationBadge } from '@/components/ui/verification-badge'
-import { Users, Mail, Linkedin, Facebook, Instagram, Globe } from 'lucide-react'
+import { Users, User, Mail, Linkedin, Facebook, Instagram, Globe } from 'lucide-react'
 
 interface Alumni {
   Name: string
