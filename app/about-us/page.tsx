@@ -40,21 +40,21 @@ interface Achievement {
 
 const milestones: Milestone[] = [
   {
-    year: '2004',
+    year: '2010',
     title: 'Department Establishment',
-    description: 'The Department of Electrical and Electronic Engineering was established at University of Asia Pacific, beginning our journey of excellence in engineering education.',
+    description: 'The Department of English was established at University of Asia Pacific, beginning our journey of excellence in English and Literature education.',
     type: 'establishment'
   },
   {
-    year: '2008',
+    year: '2014',
     title: 'First Graduation Batch',
-    description: 'Our first batch of EEE graduates completed their studies, marking the beginning of our distinguished alumni network.',
+    description: 'Our first batch of English graduates completed their studies, marking the beginning of our distinguished alumni network.',
     type: 'achievement'
   },
   {
-    year: '2018',
+    year: '2025',
     title: 'Alumni Association Formation',
-    description: 'Formal establishment of the EEE Alumni Association to strengthen connections and support current students.',
+    description: 'Formal establishment of the English Alumni Association to strengthen connections and support current students.',
     type: 'expansion'
   },
   {
@@ -69,18 +69,7 @@ const milestones: Milestone[] = [
     description: 'Introduced digital alumni portal to enhance communication, networking, and professional development opportunities.',
     type: 'expansion'
   },
-  {
-    year: '2025',
-    title: 'Global Alumni Network',
-    description: 'Expanded alumni network internationally with graduates working in leading companies across USA, Europe, Asia, and Middle East.',
-    type: 'recognition'
-  },
-  {
-    year: '2025',
-    title: 'Alumni Scholarship Fund',
-    description: 'Established alumni-funded scholarship program to support deserving students in their academic journey.',
-    type: 'expansion'
-  },
+
   {
     year: '2025',
     title: 'Alumni Excellence Awards',
@@ -104,13 +93,7 @@ const achievements: Achievement[] = [
     icon: <Trophy className="w-8 h-8" />,
     value: '50+'
   },
-  {
-    id: '3',
-    title: 'Entrepreneurs',
-    description: 'Alumni-founded companies',
-    icon: <Briefcase className="w-8 h-8" />,
-    value: '25+'
-  },
+ 
   {
     id: '4',
     title: 'Countries',
@@ -123,7 +106,7 @@ const achievements: Achievement[] = [
     title: 'Mentorship Programs',
     description: 'Active mentorship initiatives',
     icon: <GraduationCap className="w-8 h-8" />,
-    value: '10+'
+    value: '5+'
   }
   
 ]
@@ -157,15 +140,15 @@ export default function AboutUsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              EEE Alumni Portal
+              English Alumni Portal
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Department of EEE, University of Asia Pacific
+              Department of English, University of Asia Pacific
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center space-x-2">
                 <Calendar className="w-5 h-5" />
-                <span>Established 2004</span>
+                <span>Established 2010</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Network className="w-5 h-5" />
@@ -194,22 +177,22 @@ export default function AboutUsPage() {
                   <p className="text-gray-700 leading-relaxed">
                     To foster a vibrant and supportive alumni community that strengthens professional networks, 
                     provides mentorship opportunities, and contributes to the continuous growth and excellence 
-                    of the EEE Department at University of Asia Pacific.
+                    of the English Department at University of Asia Pacific.
                   </p>
                 </Card>
                 <Card className="p-8 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
                   <h3 className="text-2xl font-bold text-green-900 mb-4">Vision</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    To become the most connected and influential alumni network in Bangladesh's engineering community, 
+                    To become the most connected and influential alumni network in Bangladesh's English and Literature community, 
                     empowering graduates to achieve professional excellence while giving back to future generations 
-                    of electrical and electronic engineers.
+                    of English and Literature.
                   </p>
                 </Card>
               </div>
               <p className="text-xl text-gray-600 leading-relaxed">
-                The EEE Alumni Portal serves as the digital hub connecting our distinguished graduates worldwide. 
-                Since our first graduation in 2012, we have built a strong community of professionals who continue 
-                to shape the future of electrical and electronic engineering across various industries and continents.
+                The English Alumni Portal serves as the digital hub connecting our distinguished graduates worldwide. 
+                Since our first graduation in 2014, we have built a strong community of professionals who continue 
+                to shape the future of English and literature across various industries and continents.
               </p>
             </div>
 
@@ -220,8 +203,7 @@ export default function AboutUsPage() {
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
                   Our alumni network spans across the globe, with graduates working in leading technology companies, 
-                  research institutions, and entrepreneurial ventures. From Silicon Valley to Singapore, from Dhaka 
-                  to Dubai, our alumni are making significant contributions to the field of electrical and electronic engineering.
+                  research institutions, and entrepreneurial ventures.Our alumni are making significant contributions to the field of English.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   The Alumni Portal facilitates meaningful connections, career opportunities, and knowledge sharing 
@@ -365,8 +347,8 @@ export default function AboutUsPage() {
             Join Our Alumni Community
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Connect with fellow EEE graduates, share your achievements, mentor current students, 
-            and be part of a network that's shaping the future of electrical and electronic engineering.
+            Connect with fellow English graduates, share your achievements, mentor current students, 
+            and be part of a network that's shaping the future of English and Literature.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/alumni">

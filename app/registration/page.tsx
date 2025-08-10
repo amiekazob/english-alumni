@@ -95,7 +95,7 @@ export default function RegistrationPage() {
               Alumni Registration
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Join our alumni network and stay connected with the Department of EEE community at the University of Asia Pacific.
+              Join our alumni network and stay connected with the Department of English community at the University of Asia Pacific.
             </p>
           </div>
 
@@ -330,7 +330,7 @@ export default function RegistrationPage() {
             <p className="text-gray-600">
               Need help? Contact us at{' '}
               <a href="mailto:alumni@uap-bd.edu" className="text-blue-600 hover:text-blue-800 font-medium">
-                alumni-eee@uap-bd.edu
+                alumni-english@uap-bd.edu
               </a>
             </p>
           </div>

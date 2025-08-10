@@ -8,8 +8,8 @@ import FeaturedAlumniSection from '@/components/FeaturedAlumniSection'
 
 export const metadata: Metadata = generateSEOMetadata({
   title: 'Home',
-  description: 'Welcome to the Department of Pharmacy at University of Asia Pacific. Discover our cutting-edge programs, world-class faculty, and innovative education in pharmaceutical sciences.',
-  keywords: 'UAP Pharmacy, pharmacy home, pharmaceutical sciences Bangladesh, pharmacy education, UAP department, pharmacy programs',
+  description: 'Welcome to the Department of English at University of Asia Pacific. Discover our cutting-edge programs, world-class faculty, and innovative education in pharmaceutical sciences.',
+  keywords: 'UAP Pharmacy, English home, pharmaceutical sciences Bangladesh, pharmacy education, UAP department, pharmacy programs',
   url: 'https://uap-pharmacy.edu.bd',
   image: '/og-image.svg'
 })
@@ -70,11 +70,11 @@ export default async function Homepage() {
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Welcome to 
               <span className="bg-gradient-to-r from-accent-400 to-accent-500 bg-clip-text text-transparent">
-                EEE Department
+                English Department
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Discover our distinguished alumni network and connect with graduates who are making a difference in electrical and electronic sciences worldwide
+              Discover our distinguished alumni network and connect with graduates who are making a difference in english and literature worldwide
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/alumni">
@@ -164,7 +164,7 @@ export default async function Homepage() {
               </span>
             </h2>
             <p className="text-xl md:text-2xl text-primary-100 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Connect with fellow graduates, share your achievements, and help shape the future of electrical and electronic education
+              Connect with fellow graduates, share your achievements, and help shape the future of english and literature education
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

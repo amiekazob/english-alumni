@@ -30,7 +30,7 @@ export default function MessageFromHeadPage() {
               Message from the Head
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Department EEE
+              Department English
             </p>
             <p className="text-lg text-blue-200">
               University of Asia Pacific
@@ -50,7 +50,7 @@ export default function MessageFromHeadPage() {
                   <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-100 flex items-center justify-center">
                      <iframe 
                        className="w-full h-full rounded-t-lg"
-                       src="https://www.youtube.com/embed/x3W_aZg8tsA?si=ZxFRZjalX-h3TDcT"
+                       src="https://www.youtube.com/embed/"
                        title="Message from Head of Department"
                        frameBorder="0"
                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -59,13 +59,13 @@ export default function MessageFromHeadPage() {
                    </div>
                   <CardHeader className="text-center">
                     <CardTitle className="text-2xl font-bold text-gray-900">
-                       A.H.M. Zadidul Karim
+                       Mr. Takad Ahmed Chowdhury
                      </CardTitle>
                      <CardDescription className="text-lg">
                        Head of Department
                      </CardDescription>
                      <Badge className="mx-auto bg-blue-100 text-blue-800 border-blue-200">
-                       Department of EEE
+                       Department of English
                      </Badge>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -76,7 +76,7 @@ export default function MessageFromHeadPage() {
                       </div>
                       <div className="flex items-center space-x-3 text-sm text-gray-600">
                          <Mail className="w-4 h-4" />
-                         <span>headeee@uap-bd.edu</span>
+                         <span>headenglish@uap-bd.edu</span>
                        </div>
                       <div className="flex items-center space-x-3 text-sm text-gray-600">
                         <Phone className="w-4 h-4" />
@@ -92,7 +92,7 @@ export default function MessageFromHeadPage() {
                 <Card className="p-8">
                   <CardHeader>
                     <CardTitle className="text-3xl font-bold text-gray-900 mb-4">
-                       Welcome to the Department of EEE
+                       Welcome to the Department of English
                      </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6 text-gray-700 leading-relaxed">
@@ -100,62 +100,39 @@ export default function MessageFromHeadPage() {
                       Dear Students, Alumni, and Esteemed Colleagues,
                     </p>
                     
-                   <p>
-  It is my great pleasure to welcome you to the Department of Electrical and Electronic Engineering (EEE) 
-  at the University of Asia Pacific. As the Head of this distinguished department, I am proud to 
-  lead an institution that has been at the forefront of engineering education, research, and innovation 
-  since its establishment.
+<p>
+  It is my great pleasure to welcome you to the Department of English at the University of Asia Pacific. As the Head of this esteemed department, I am proud to lead a vibrant academic community dedicated to the study and advancement of English language, literature, and linguistics since its inception.
 </p>
 
 <p>
-  Our department stands as a hub of technological advancement and academic excellence, committed to nurturing 
-  the next generation of engineers, innovators, and researchers who will shape the future of Bangladesh and 
-  the global technological landscape. We have built a strong foundation based on three core pillars: 
-  academic excellence, cutting-edge research, and strong industry collaboration.
+  Our department serves as a dynamic center for critical thinking, creative expression, and cultural exploration, committed to nurturing the next generation of scholars, writers, educators, and communicators who will shape the intellectual and cultural future of Bangladesh and the wider world. We have built a strong foundation upon three core pillars: academic excellence, innovative research, and community engagement.
 </p>
 
 <p>
-  Over the years, we have witnessed remarkable growth in our academic programs, research initiatives, 
-  and alumni network. Our graduates have gone on to achieve outstanding success in leading technology 
-  companies, power and energy sectors, telecommunications, research institutions, and entrepreneurial 
-  ventures across the globe. From multinational corporations to pioneering local startups, our alumni are 
-  making meaningful contributions to the fields of electrical engineering, electronics, telecommunications, 
-  renewable energy, artificial intelligence, and beyond.
+  Over the years, we have experienced significant growth in our academic programs, research activities, and alumni achievements. Our graduates have gone on to excel in diverse fields including education, publishing, media, translation, cultural organizations, and international institutions. From global corporations to local initiatives, our alumni are making meaningful contributions in literature, language education, journalism, creative writing, and beyond.
 </p>
 
 <p>
-  Our faculty members are dedicated educators and researchers who bring both academic expertise and 
-  real-world experience into the classroom. We focus on emerging areas such as power systems, renewable energy, 
-  robotics and automation, signal processing, telecommunications, embedded systems, VLSI design, and 
-  artificial intelligence. Our research efforts address critical challenges in energy efficiency, sustainable 
-  technology, smart systems, and advanced communication.
+  Our faculty members are dedicated educators and researchers who bring both scholarly expertise and practical experience to the classroom. We emphasize critical analysis, literary theory, language acquisition, creative writing, and interdisciplinary studies. Our research addresses important themes such as postcolonial studies, gender and identity, digital humanities, language policy, and communication in a globalized world.
 </p>
 
 <p>
-  The department takes pride in maintaining strong industry partnerships that provide our students with 
-  valuable internship opportunities, hands-on training, mentorship, and career guidance. We believe in 
-  bridging the gap between theoretical knowledge and practical application, ensuring our graduates are 
-  fully equipped to meet the demands of the rapidly evolving engineering world.
+  The department prides itself on fostering strong community and industry connections that offer students valuable internship opportunities, hands-on experience, mentorship, and career development. We believe in bridging theoretical knowledge with practical application to ensure our graduates are well-prepared to meet the challenges of the evolving professional and cultural landscapes.
 </p>
 
 <p>
-  As we look towards the future, we remain committed to excellence in higher education, empowering 
-  minds, shaping futures, and building tomorrow’s leaders in engineering and technology. Our vision is 
-  to become the leading EEE department in Bangladesh, recognized globally for our academic achievements, 
-  impactful research, and contribution to technological progress.
+  Looking ahead, we remain committed to academic distinction, empowering minds, shaping futures, and cultivating leaders in the fields of language, literature, and communication. Our vision is to become the leading English department in Bangladesh, recognized internationally for our scholarly achievements, innovative research, and cultural contributions.
 </p>
 
 <p>
-  I warmly invite you to explore our academic offerings, engage with our vibrant alumni community, and be 
-  an active part of our journey towards innovation and engineering excellence. Together, we will continue 
-  to push the boundaries of knowledge and transform ideas into solutions that benefit society.
+  I warmly invite you to explore our academic offerings, engage with our vibrant alumni network, and actively participate in our journey toward intellectual discovery and excellence in the humanities. Together, we will continue to expand the horizons of knowledge and transform ideas into meaningful impact for society.
 </p>
 
                     <p className="text-lg font-medium">
                       Warm regards,<br />
-                      <span className="text-blue-600">A.H.M. Zadidul Karim</span><br />
+                      <span className="text-blue-600">Mr. Takad Ahmed Chowdhury</span><br />
                        Head of Department<br />
-                       Department of EEE<br />
+                       Department of English<br />
                       University of Asia Pacific
                     </p>
                   </CardContent>

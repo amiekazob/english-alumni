@@ -60,11 +60,11 @@ const universityContact: UniversityContact = {
 // EEE Club Contact Information
 const clubContact = {
   officeName: "Deptartment Administration Office",
-  roomNumber: "Room 500, 5th Floor",
-  department: "Department of EEE",
+  roomNumber: "Room 300, 3rd Floor",
+  department: "Department of English",
   university: "University of Asia Pacific",
-  fullAddress: "Room 500, EEE Department, University of Asia Pacific, 74/A Green Road, Dhaka-1205",
-  email: "dao.eee@uap-bd.edu",
+  fullAddress: "Room 500, English Department, University of Asia Pacific, 74/A Green Road, Dhaka-1205",
+  email: "dao.english@uap-bd.edu",
   phone: "+01717558922", // President/Secretary contact
   socialMedia: {
     facebook: "https://www.facebook.com/PAICLUBEEE",
@@ -77,22 +77,14 @@ const clubContact = {
 const deptContacts: ContactInfo[] = [
   {
     id: "1",
-    name: "Md. Rahamat Ullah",
-    title: "Senior Administrative Officer",
-    phone: "58157091-4",
+    name: "Md. Sharmima Sultana",
+    title: "Department Administrative Officer",
+    phone: "01761111137",
     extension: "555",
-    mobile: "01717558922",
-    email: "dao.eee@uap-bd.edu"
-  },
-  {
-    id: "2",
-    name: "Md. Kamruzzaman",
-    title: "Assistant Administrative Officer",
-    phone: "58157091-4",
-    extension: "555",
-    mobile: "01746120504",
-    email: "zaman_eee@uap-bd.edu"
+    mobile: "01761111137",
+    email: "dao.english@uap-bd.edu"
   }
+
 ]
 
 

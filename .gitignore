@@ -49,6 +49,10 @@ pids
 # Coverage directory used by tools like istanbul
 coverage/
 
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
 # Dependency directories
 node_modules/
 jspm_packages/

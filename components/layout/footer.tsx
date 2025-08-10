@@ -20,8 +20,8 @@ export function Footer() {
                 <img src="/images/logo.png" alt="Pharmacy Alumni Logo" className="w-full h-full object-cover rounded-full" />
               </div>
               <div className="flex flex-col" suppressHydrationWarning={true}>
-                <span className="font-bold text-lg text-white">EEE Alumni Association</span>
-                <span className="text-xs text-gray-300">Dept. of EEE - University of Asia Pacific</span>
+                <span className="font-bold text-lg text-white">English Alumni Association</span>
+                <span className="text-xs text-gray-300">Dept. of English - University of Asia Pacific</span>
               </div>
             </Link>
             <p className="text-sm max-w-xs text-gray-300">
@@ -29,7 +29,7 @@ export function Footer() {
                 University of Asia Pacific
               </span><br />
               <span>
-                Main Campus, Level-5, 74/A
+                Main Campus, Level-3, 74/A
               </span> <br />
               <span>
                 Green Road, Dhaka-1205
@@ -125,7 +125,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="mailto:pharmacy.alumni@uap-bd.edu" className="hover:text-white transition-colors">
-                  alumni-eee@uap-bd.edu
+                  alumni-english@uap-bd.edu
                 </a>
               </li>
               <li>
