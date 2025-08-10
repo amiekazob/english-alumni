@@ -141,7 +141,7 @@ export default function AlumniPage() {
               English Alumni Portal
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Connect with our distinguished graduates from the Department of EEE
+              Connect with our distinguished graduates from the Department of English
             </p>
             
             {/* Stats */}
