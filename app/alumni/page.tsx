@@ -138,7 +138,7 @@ export default function AlumniPage() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              EEE Alumni Portal
+              English Alumni Portal
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Connect with our distinguished graduates from the Department of EEE
